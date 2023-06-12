@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="page">
+
+<h3>Manter cliente</h3>
+
+    <div class="dataview">
+        <div class="th">ID</div>
+        <div class="th">Nome</div>
+        <div class="th">cpf</div>
+        <div class="th">data</div>
+        <div class="th">actions</div>
+    {% for cli in clientes %}
+        <div> {{ cli[0] }} </div>
+        <div> {{ cli[1] }} </div>
+        <div> {{ cli[2] }} </div>
+        <div> {{ cli[4] }} </div>
+        <div>
+            <a href="/delete/{{cli[0]}}">[X]</a> |
+            <a href="/cliente/edit/{{cli[0]}}">[E]</a>
+        </div>
+    {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
