@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="page">
+
+{% if cliente %}
+    <h3>Atualizar cliente</h3>
+{% else %}
+    <h3>Cadastro cliente</h3>
+{% endif %}
+
+<form class="manter" action="/save" method="POST" >
+    {% if cliente %}
+        <input type="hidden" name="id" value="{{ cliente[0] }}">
+    {% endif %}
+    <label>
+        <span>Nome</span>
+        <input type="text" value="{{ cliente[1] }}" name="nome" autocomplete="off" minlength="2" required="required"/>
+    </label>
+    <label>
+        <span>CPF</span>
+        <input type="text" value="{{ cliente[2] }}" name="cpf" autocomplete="off"/>
+    </label>
+    <label>
+        <span>Email</span>
+        <input type="text" value="{{ cliente[3] }}" name="email" autocomplete="off"/>
+    </label>
+    {% if cliente %}
+        <input type="submit" value="atualizar"/>
+    {% else %}
+        <input type="submit" value="adicinar"/>
+    {% endif %}
+</form>
+
+</div>
+{% endblock %}

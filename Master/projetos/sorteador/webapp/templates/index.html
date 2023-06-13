@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteador</title>
+    <style>
+        div.numeros {
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<div class="numeros">{{numeros}}</div>
+
+<form action="{{ url_for('gerar') }}" method="get">
+    <button name="gerar">gerar numeros da mega</button>
+</form>
+
+rota: /imc
+Cálculo do IMC (form)
+- Lê no form o Peso e altura
+- retornar uma mensagem com
+    - imc
+    - imc > 25 "pratique atividade fisica!"
+    - imc < 20 "se alimente melhor!"
+
+</body>
+</html>

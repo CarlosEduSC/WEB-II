@@ -1,0 +1,29 @@
+div.dataview{
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+}
+div.dataview div.th{
+    font-weight: bold;
+    background: #dfedf0;
+}
+ div.dataview div{
+    padding: 0 20px;
+}
+form.manter {
+    width: fit-content;
+    text-align: right;
+}
+form.manter label{
+    display: block;
+    padding: 5px 0px;
+}
+form.manter input[type='text']{
+    min-width: 200px;
+}
+
+form.manter label span{
+    display: inline-block;
+    min-width: 100px;
+    text-align: right;
+    padding: 0px 10px;
+}
